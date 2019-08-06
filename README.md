@@ -25,3 +25,21 @@ Then just follow the instructions on-screen
 - Extension support
 - WebKit2 integration
 - Windows and Mac support
+
+# WARNING!
+The installation script contains "os.system" commands
+Witch are well known for being a vulnerability.
+Do not install if you downloaded it from any other location!
+
+#Disclaimer
+I am not responsible for any damage that may have occurred 
+to your system while installing the program!
+
+#Special thanks
+Thanks to the tutorials from:
+(Julita Inca)https://lleksah.wordpress.com/2017/07/31/writing-my-first-web-browser-in-python-with-gtk/amp/
+(Brobin)https://brobin.me/blog/2014/07/how-to-make-your-own-web-browser-in-python/
+
+#Note:
+This is my first public project so the code okay look unprofessional
+Any criticism and suggestions are highly appreciated
