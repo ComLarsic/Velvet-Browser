@@ -6,10 +6,10 @@ For right now it only works on Linux, Windows support coming soon!
 
 # How to install
 enter in terminal:
-'''
+```
 chmod +x Install_Linux.py
-'''
+```
 and then execute it:
-'''
+```
 ./Install_Linux
-'''
+```
