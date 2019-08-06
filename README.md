@@ -49,8 +49,8 @@ to your system while installing the program!
 
 # Special thanks
 Thanks to the tutorials from:
-(Julita Inca)https://lleksah.wordpress.com/2017/07/31/writing-my-first-web-browser-in-python-with-gtk/amp/
-(Brobin)https://brobin.me/blog/2014/07/how-to-make-your-own-web-browser-in-python/
+-(Julita Inca)https://lleksah.wordpress.com/2017/07/31/writing-my-first-web-browser-in-python-with-gtk/amp/
+-(Brobin)https://brobin.me/blog/2014/07/how-to-make-your-own-web-browser-in-python/
 
 # Note:
 This is my first public project so the code okay look unprofessional
