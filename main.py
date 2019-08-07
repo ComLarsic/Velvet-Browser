@@ -78,7 +78,7 @@ window.set_titlebar(headbar)
 window.set_default_size(1000,600)
 window.add(scrolled_window)
 #webview
-webview.open("https://www.celys.space/")
+webview.open("https://www.duckduckgo.com")
 #window
 window.connect("destroy", on_destroy)
 window.show_all()
