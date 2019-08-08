@@ -9,6 +9,6 @@ os.system(f"mkdir /home/{usr}/Velvet/")
 os.system(f"touch /home/{usr}/Velvet/history.txt")
 os.system(f"sudo touch /usr/share/applications/Velvet.desktop")
 os.system(f"cp -a {dir}/. /home/{usr}/Velvet")
-os.system(f"echo Done! reboot to complete the installation")
+os.system(f"echo Done!")
 with open(f"/usr/share/applications/Velvet.desktop", 'a') as desk:
      desk.write(f"[Desktop Entry]\nVersion=1.0\nExec=/home/{usr}/Velvet/main.py\nName=Velvet\nGenericName=Velvet\nComment=Connect to The Internet\nEncoding=UTF-8\nTerminal=true\nType=Application\nCategories=Application;Network;")
