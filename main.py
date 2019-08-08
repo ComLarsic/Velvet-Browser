@@ -3,14 +3,14 @@ import gi
 import os
 import getpass
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, WebKit
+from gi.repository import Gtk, WebKit2
 
 #Defining variables
 dir = os.path.dirname(os.path.abspath(__file__))
 usr = getpass.getuser()
 window = Gtk.Window()
 headbar = Gtk.HeaderBar()
-webview = WebKit.WebView()
+webview = WebKit2.WebView()
 window.set_title("Velvet Browser")
 scrolled_window = Gtk.ScrolledWindow()
 entry = Gtk.Entry()
@@ -39,7 +39,7 @@ def on_reload(self):
         webview.reload()
 
 def on_history(self):
-        webview.open(f"file:///{dir}/history.html")
+        webview.load_uri(f"file:///{dir}/history.html")
 
 def on_destroy(window):
     Gtk.main_quit()
@@ -47,11 +47,11 @@ def on_destroy(window):
 def on_enter(entry):
     url = entry.get_text()
     print(url)
-    webview.open(f"https://{url}")
+    webview.load_uri(f"https://{url}")
     with open(f"{dir}/history.html", 'a') as history:
                 history.write("* <a href=\"" + url + "\">" + url + "</a><br>")
     if (url == "about:history"):
-        webview.open(f"file:///{dir}/history.html")
+        webview.load_uri(f"file:///{dir}/history.html")
         return
 
 entry.connect("activate", on_enter)
@@ -78,7 +78,7 @@ window.set_titlebar(headbar)
 window.set_default_size(1000,600)
 window.add(scrolled_window)
 #webview
-webview.open("https://www.duckduckgo.com")
+webview.load_uri("https://www.duckduckgo.com")
 #window
 window.connect("destroy", on_destroy)
 window.show_all()
