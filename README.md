@@ -28,15 +28,15 @@ sudo ./Uninstall_Linux.py
 ```
 
 # Issues
-- history button broken
-- crashes while watching youtube
 - some mild visual glitches
 
 # What im working on
-- Youtube support
 - Extension support
-- WebKit2 integration
 - Windows and Mac support
+- Android support
+- Tabs
+- Cookies support
+- An icon
 
 # WARNING!
 The installation script contains "os.system" commands
