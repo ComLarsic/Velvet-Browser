@@ -2,7 +2,9 @@
 import gi
 import os
 import getpass
+import keyboard
 gi.require_version("Gtk", "3.0")
+gi.require_version("WebKit2", "4.0")
 from gi.repository import Gtk, WebKit2
 
 #Defining variables
@@ -34,7 +36,8 @@ go_forward_arrow = Gtk.Image.new_from_icon_name("go-next", Gtk.IconSize.SMALL_TO
 go_forward_button.add(go_forward_arrow)
 go_forward_button.connect("clicked", on_go_forward)
 
-# Basic functionality
+
+
 def on_reload(self):
         webview.reload()
 
@@ -45,12 +48,13 @@ def on_destroy(window):
     Gtk.main_quit()
 
 def on_enter(entry):
-    url = entry.get_text()
+    url = webview.get_uri()
+    entry_uri = entry.get_text()
     print(url)
-    webview.load_uri(f"https://{url}")
+    webview.load_uri(f"https://{entry_uri}")
     with open(f"{dir}/history.html", 'a') as history:
                 history.write("* <a href=\"" + url + "\">" + url + "</a><br>")
-    if (url == "about:history"):
+    if (entry_uri == "about:history"):
         webview.load_uri(f"file:///{dir}/history.html")
         return
 
@@ -78,6 +82,7 @@ window.set_titlebar(headbar)
 window.set_default_size(1000,600)
 window.add(scrolled_window)
 #webview
+
 webview.load_uri("https://www.duckduckgo.com")
 #window
 window.connect("destroy", on_destroy)
