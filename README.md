@@ -4,6 +4,9 @@ Velvet is a codename for a basic web browser made in python using Gtk3 and WebKi
 # Support
 For right now it only works on Linux, Windows support coming soon!
 
+# Requirments:
+-Python 3.6
+
 # How to install
 Navigate to the directory you cloned the code in,
 Open a terminal there and enter:
