@@ -32,8 +32,6 @@ class Velvet():
                 self.entry.connect("activate", self.on_enter)
                 self.entry.set_size_request(500,50)
 
-                
-
                 self.reload_button = Gtk.Button()
                 self.reload_icon = Gtk.Image.new_from_icon_name("object-rotate-left", Gtk.IconSize.SMALL_TOOLBAR)
                 self.reload_button.add(self.reload_icon)
@@ -82,6 +80,7 @@ class Velvet():
 
         def on_destroy(self, window):
                 Gtk.main_quit()
+
 
         def on_enter(self, entry):
                 entry_uri = self.entry.get_text()
