@@ -2,7 +2,6 @@
 import gi
 import os
 import getpass
-import keyboard
 gi.require_version("Gtk", "3.0")
 gi.require_version("WebKit2", "4.0")
 from gi.repository import Gtk, WebKit2
@@ -15,7 +14,6 @@ class Velvet():
                 self.headbar = Gtk.HeaderBar()
                 self.webview = WebKit2.WebView()
                 self.window.set_title("Velvet Browser")
-                self.window.set_icon_from_file('icon.png')
                 self.scrolled_window = Gtk.ScrolledWindow()
                 self.directory = os.path.dirname(os.path.abspath(__file__))
                 self.url = self.webview.get_uri()
@@ -31,6 +29,8 @@ class Velvet():
                 self.go_forward_button.connect("clicked", self.on_go_forward)
                 self.entry.connect("activate", self.on_enter)
                 self.entry.set_size_request(500,50)
+
+                
 
                 self.reload_button = Gtk.Button()
                 self.reload_icon = Gtk.Image.new_from_icon_name("object-rotate-left", Gtk.IconSize.SMALL_TOOLBAR)
@@ -80,7 +80,6 @@ class Velvet():
 
         def on_destroy(self, window):
                 Gtk.main_quit()
-
 
         def on_enter(self, entry):
                 entry_uri = self.entry.get_text()
