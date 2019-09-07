@@ -20,11 +20,11 @@ class Velvet():
                 self.entry = Gtk.Entry()
                 self.headbar.set_custom_title(self.entry)
                 self.go_back_button = Gtk.Button()
-                self.go_back_arrow = Gtk.Image.new_from_icon_name("go-previous", Gtk.IconSize.SMALL_TOOLBAR)
+                self.go_back_arrow = Gtk.Image.new_from_file("go_back.png")
                 self.go_back_button.add(self.go_back_arrow)
                 self.go_back_button.connect("clicked", self.on_go_back)
                 self.go_forward_button = Gtk.Button()
-                self.go_forward_arrow = Gtk.Image.new_from_icon_name("go-next", Gtk.IconSize.SMALL_TOOLBAR)
+                self.go_forward_arrow = Gtk.Image.new_from_file("go_forward.png")
                 self.go_forward_button.add(self.go_forward_arrow)
                 self.go_forward_button.connect("clicked", self.on_go_forward)
                 self.entry.connect("activate", self.on_enter)
@@ -33,7 +33,7 @@ class Velvet():
                 
 
                 self.reload_button = Gtk.Button()
-                self.reload_icon = Gtk.Image.new_from_icon_name("object-rotate-left", Gtk.IconSize.SMALL_TOOLBAR)
+                self.reload_icon = Gtk.Image.new_from_file("on_reload.png")
                 self.reload_button.add(self.reload_icon)
                 self.reload_button.connect("clicked", self.on_reload)
 
